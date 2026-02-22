@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>urbanplanningguide – Councilytics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c0c0ef435f18724cfbdf9cc41b48a28d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GJBVDJYW15"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GJBVDJYW15', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./MC_Logo_Stacked.svg" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-commission-reports" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Commission Reports</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-commission-reports">    
+        <li>
+    <a class="dropdown-item" href="./Urban_Design.html">
+ <span class="dropdown-text">Urban Design Commission</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Landmarks.html">
+ <span class="dropdown-text">Landmarks Commission</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Plan_Commission.html">
+ <span class="dropdown-text">Plan Commission</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./property-index.html">
+ <span class="dropdown-text">Development Project Index</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-voting-record" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Voting Record</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-voting-record">    
+        <li>
+    <a class="dropdown-item" href="./index.html">
+ <span class="dropdown-text">Madison Common Council Voting Record</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Historical_2023_25_Voting.html">
+ <span class="dropdown-text">Historical Voting Record</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.cityofmadison.com/council/councilmembers/findAlderByAddress.cfm"> 
+<span class="menu-text">Who’s Your Alder?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:contact@councilytics.com"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.buymeacoffee.com/councilytics"> 
+<span class="menu-text">☕ Support Madison Councilytics</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="urbanism-zoning-planning-in-madison-wi-a-starter-guide" class="level1">
+<h1>Urbanism, Zoning &amp; Planning in Madison, WI: A Starter Guide</h1>
+<p>A curated collection of books, links, and data resources for someone getting into urbanism and housing/zoning reform — with a focus on how things work in Madison.</p>
+<p>Version 1, updated February 22, 2026.</p>
+<p>By Michael Zenz (mike@councilytics.com), with the help of Claude AI.</p>
+<hr>
+<section id="part-1-urbanism-housing-book-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-urbanism-housing-book-recommendations">Part 1: Urbanism &amp; Housing — Book Recommendations</h2>
+<p>These are foundational reads for understanding how cities work, why zoning matters, and how we got to where we are. Organized roughly from most accessible to most in-depth.</p>
+<section id="the-essentials" class="level3">
+<h3 class="anchored" data-anchor-id="the-essentials">The Essentials</h3>
+<ul>
+<li><p><strong>“The Death and Life of Great American Cities”</strong> — Jane Jacobs (1961) <strong>The classic that started it all. Jacobs challenged the planning orthodoxy of the mid-20th century by closely observing how city neighborhoods actually function. Her ideas about mixed-use streets, density, and “eyes on the street” remain the bedrock of urbanism thinking. Start here.</strong> [Read this one second. -Mike]</p></li>
+<li><p><strong>“The Color of Law: A Forgotten History of How Our Government Segregated America”</strong> — Richard Rothstein (2017) <strong>Essential for understanding how zoning, federal housing policy, and deliberate government action created the racially segregated landscape of American cities. You can’t understand zoning reform without understanding this history.</strong> [Read this one third. -Mike]</p></li>
+<li><p><strong>“Arbitrary Lines: How Zoning Broke the American City and How to Fix It”</strong> — M. Nolan Gray (2022) <strong>A concise, accessible argument for why American zoning is broken and what alternatives exist. Great for someone diving into a zoning data project — Gray is good at explaining the mechanics of how zoning codes actually work and what they produce.</strong> [Read this one first. -Mike]</p></li>
+</ul>
+</section>
+<section id="going-deeper" class="level3">
+<h3 class="anchored" data-anchor-id="going-deeper">Going Deeper</h3>
+<ul>
+<li><p><strong>“Strong Towns: A Bottom-Up Revolution to Rebuild American Prosperity”</strong> — Charles Marohn (2019) Marohn’s core argument is that American development patterns are a financial Ponzi scheme — cities can’t afford the infrastructure they’ve built. A fiscal lens on why sprawl fails and incremental, traditional development patterns work. The <a href="https://www.strongtowns.org/">Strong Towns website</a> is also an excellent ongoing resource.</p></li>
+<li><p><strong>“Zoning Rules! The Economics of Land Use Regulation”</strong> — William Fischel (2015) More academic, but the go-to for understanding the economics of why zoning exists and how homeowner politics (“homevoters”) shape land use decisions. Very relevant to what’s happening in Madison.</p></li>
+<li><p><strong>“Missing Middle Housing: Thinking Big and Building Small to Respond to Today’s Housing Crisis”</strong> — Daniel Parolek (2020) Directly relevant to Madison’s Housing Forward initiative. Parolek coined the term “missing middle” and this book catalogs the housing types (duplexes, fourplexes, cottage courts, etc.) that zoning has eliminated from most American neighborhoods.</p></li>
+<li><p><strong>“Walkable City: How Downtown Can Save America, One Step at a Time”</strong> — Jeff Speck (2012) <strong>A very readable case for walkability as the key indicator of urban vitality. Covers street design, parking, transit, and how they all connect to land use.</strong> <em>[Read this one fourth. -Mike]</em></p></li>
+</ul>
+</section>
+<section id="for-the-historically-curious" class="level3">
+<h3 class="anchored" data-anchor-id="for-the-historically-curious">For the Historically Curious</h3>
+<ul>
+<li><p><strong>“The High Cost of Free Parking”</strong> — Donald Shoup (2005, updated 2011) A deep (and surprisingly entertaining) look at how parking requirements in zoning codes distort cities. Dense, but incredibly influential — basically the founding text of parking reform.</p></li>
+<li><p><strong>“Triumph of the City”</strong> — Edward Glaeser (2011) An economist’s love letter to density and urban agglomeration. Good for understanding <em>why</em> cities exist and why they’re economically powerful.</p></li>
+<li><p><strong>“Bulldozed: Kelo, Eminent Domain, and the American Lust for Land”</strong> — Carla Main (2007) For understanding the politics of property rights, takings, and development — the legal backdrop to many zoning fights.</p></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="part-2-how-planning-zoning-works-in-madison" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-how-planning-zoning-works-in-madison">Part 2: How Planning &amp; Zoning Works in Madison</h2>
+<p>Madison’s planning process can be complex. Here’s a map of the key institutions, documents, and how they fit together.</p>
+<section id="the-big-picture-plans-and-policy" class="level3">
+<h3 class="anchored" data-anchor-id="the-big-picture-plans-and-policy">The Big Picture: Plans and Policy</h3>
+<p>Madison’s land use decisions are guided by city plans:</p>
+<ul>
+<li><strong>Comprehensive Plan (updated 2024)</strong> — The citywide vision document of how land should be used. State law requires zoning changes to be consistent with this plan. Its most important component is the <strong>Generalized Future Land Use (GFLU) Map</strong>, which determines what types of zoning can be applied where.
+<ul>
+<li><a href="https://www.cityofmadison.com/dpced/planning/comprehensive-plan/3894/">Comprehensive Plan page</a></li>
+<li><a href="https://plans.cityofmadison.com/">Interactive plan viewer</a></li>
+</ul></li>
+<li><strong>Area Plans</strong> — The city is developing 12 area plans that provide more detailed guidance for sub-regions. Recent examples include the West Area Plan, Northeast Area Plan, and the in-progress Southwest and Southeast Area Plans.
+<ul>
+<li><a href="https://www.cityofmadison.com/dpced/planning/plans/440/">All adopted plans</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="the-zoning-code" class="level3">
+<h3 class="anchored" data-anchor-id="the-zoning-code">The Zoning Code</h3>
+<p>Madison’s zoning ordinance is <strong>Chapter 28</strong> of the Madison General Ordinances. It was comprehensively rewritten effective January 2, 2013, and has been amended many times since.</p>
+<ul>
+<li><a href="https://library.municode.com/wi/madison/codes/code_of_ordinances?nodeId=COORMAWIVOIICH20--31_CH28ZOCOOR">Chapter 28 — Zoning Code (full text via Municode)</a></li>
+<li><a href="https://www.cityofmadison.com/assessor/documents/ZoningDistricts.pdf">Zoning Districts Summary (PDF)</a> — A helpful one-page reference showing all zoning district categories.</li>
+<li><a href="https://www.cityofmadison.com/development-services-center/land-development/private-property/rezoning">Rezoning process overview</a></li>
+</ul>
+</section>
+<section id="who-makes-decisions" class="level3">
+<h3 class="anchored" data-anchor-id="who-makes-decisions">Who Makes Decisions</h3>
+<p>Understanding who approves what is key to following the process:</p>
+<ul>
+<li><p><strong>Plan Commission</strong> — Has final authority on conditional use permits and some demolition requests (those for historically valuable properites). Advisory to the Common Council on rezonings, annexations, and subdivisions. Meets roughly twice monthly.</p>
+<ul>
+<li><a href="https://www.cityofmadison.com/dpced/planning/plan-commission/3859/">Plan Commission info &amp; meeting schedule</a></li>
+<li><a href="https://madison.legistar.com/DepartmentDetail.aspx?ID=17372&amp;GUID=A8D00B00-2743-4516-B255-FE124EF3267A">Plan Commission on Legistar</a></li>
+</ul></li>
+<li><p><strong>Common Council</strong> — Has final authority on rezonings, annexations, and subdivision requests. Composed of 20 alders representing districts. This is what many cities would call the “city council.” They also determine how all the commissions function, their members, and the criteria they use</p>
+<ul>
+<li><a href="https://madison.legistar.com/MainBody.aspx">Common Council on Legistar</a></li>
+</ul></li>
+<li><p><strong>Urban Design Commission (UDC)</strong> — Reviews design aspects of projects in urban design districts and planned developments. Final authority in urban design districts; advisory to Plan Commission on many other projects.</p></li>
+<li><p><strong>Landmarks Commission</strong> — Reviews the historical significance of properties for demolition and landmark requests, and appropriatness of new buildings in city historic districts and alterations of city landmarks. If they determine that a property lacks historic significance then it can be demolished administratively (no Plan Commission review); advisory on other matters such as landmark designation.</p></li>
+<li><p><a href="https://www.cityofmadison.com/development-services-center/resources/development-review-bodies">Overview of all development review bodies</a></p></li>
+</ul>
+</section>
+<section id="how-to-follow-along-participate" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-follow-along-participate">How to Follow Along &amp; Participate</h3>
+<ul>
+<li><p><strong>Legistar</strong> — The city’s legislative tracking system. You can look up any agenda item, see its full history, and register for public comment on specific items. Be prepared to be magically transported back to the technology of 2002.</p>
+<ul>
+<li><a href="https://madison.legistar.com/">Legistar homepage (meetings &amp; agendas)</a></li>
+<li><a href="https://madison.legistar.com/Legislation.aspx">Search legislation</a></li>
+</ul></li>
+<li><p><strong>Register for public comment</strong> — You can speak public meetings (Plan Commission, Common Council, and others) in person or virtually by registering in advance. Go to the city website, find meetings by date, and register on the meeting website.</p></li>
+<li><p>Many public meetings are on Youtube, and almost all are on the [Madison City Channel] (https://www.cityofmadison.com/citychannel/)</p></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="part-3-data-gis-resources" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-data-gis-resources">Part 3: Data &amp; GIS Resources</h2>
+<p>For someone working on a data project related to zoning and land use in Madison, these are the key sources.</p>
+<section id="city-of-madison-data" class="level3">
+<h3 class="anchored" data-anchor-id="city-of-madison-data">City of Madison Data</h3>
+<ul>
+<li><strong>City of Madison Open Data Portal</strong> — The central hub. Includes downloadable GIS layers for zoning districts, parcels, land use, building permits, and much more. Data is available as shapefiles, GeoJSON, CSV, and via API.
+<ul>
+<li><a href="https://data-cityofmadison.opendata.arcgis.com/">Open Data Portal</a></li>
+</ul></li>
+<li><strong>Zoning Districts (GIS layer)</strong> — The current zoning map as a downloadable spatial dataset. This is probably the single most important dataset for a zoning analysis project.
+<ul>
+<li><a href="https://geodata.wisc.edu/catalog/CityOfMadison-4bfd0deffa8f4d5f8eefe868ab91493c9">Zoning Districts on GeoData@Wisconsin</a></li>
+</ul></li>
+<li><strong>Tax Parcels (Assessor Property Information)</strong> — Parcel-level data including assessed values, property class, year built, lot size, and more. Updated daily.
+<ul>
+<li><a href="https://data-cityofmadison.opendata.arcgis.com/datasets/cityofmadison::tax-parcels-assessor-property-information/about">Tax Parcels dataset</a></li>
+</ul></li>
+<li><strong>City Assessor Property Look-up</strong> — Search individual properties by address, owner name, or parcel number. Useful for spot-checking data.
+<ul>
+<li><a href="https://www.cityofmadison.com/assessor/property/">Property Look-up tool</a></li>
+</ul></li>
+<li><strong>City Map Applications</strong> — Interactive web maps for zoning, development info, future land use, and more.
+<ul>
+<li><a href="https://www.cityofmadison.com/live-work/neighborhoods/maps">Maps page</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="dane-county-regional-data" class="level3">
+<h3 class="anchored" data-anchor-id="dane-county-regional-data">Dane County &amp; Regional Data</h3>
+<ul>
+<li><strong>Access Dane</strong> — Dane County’s land records portal. Includes parcel data, land records search, and interactive mapping.
+<ul>
+<li><a href="https://accessdane.danecounty.gov/">Access Dane</a></li>
+<li><a href="https://accessdane.danecounty.gov/Parcel">Land Records Search</a></li>
+</ul></li>
+<li><strong>Greater Madison MPO (Metropolitan Planning Organization)</strong> — Transportation planning data, bike maps, transit route data, ridership stats, and more.
+<ul>
+<li><a href="https://www.greatermadisonmpo.org/maps/">MPO Maps &amp; Data</a></li>
+<li><a href="https://www.greatermadisonmpo.org/maps/gisData.cfm">Data Resources / Partner GIS Data</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="state-national-data" class="level3">
+<h3 class="anchored" data-anchor-id="state-national-data">State &amp; National Data</h3>
+<ul>
+<li><strong>GeoData@Wisconsin</strong> — UW-maintained geoportal for discovering and downloading Wisconsin geospatial data, imagery, and scanned maps. Free to download.
+<ul>
+<li><a href="https://geodata.wisc.edu/">GeoData@Wisconsin</a></li>
+</ul></li>
+<li><strong>U.S. Census / American Community Survey</strong> — For demographic, housing, and economic data at the tract/block group level. Essential for combining with zoning data. Warning that Census data is pretty complex, so probably not for the novice. People spend entire careers studying this data.
+<ul>
+<li><a href="https://data.census.gov/">data.census.gov</a></li>
+<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">TIGER/Line boundary files</a></li>
+</ul></li>
+</ul>
+<hr>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/councilytics\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p><a href="mailto:contact@councilytics.com">Contact Madison Councilytics</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
